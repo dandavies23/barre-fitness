@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_studio.jpg') no-repeat center center fixed;
+    background: url('/media/homepage-classes-weights.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: #7b8582;
     font-family: 'Inter';
 }
 
