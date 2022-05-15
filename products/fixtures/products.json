@@ -1,0 +1,296 @@
+[
+ {
+  "pk": 1,
+  "model": "products.product",
+  "fields": {
+    "sku": "TORI760059",
+    "name": "Tori Murphy gym bag",
+    "category": 1,
+    "brand": "Tori Murphy",
+    "variants": 1,
+    "price": 36,
+    "stock": 1,
+    "image": null
+  }
+ },
+ {
+  "pk": 2,
+  "model": "products.product",
+    "fields": {
+    "sku": "TORI345169",
+    "name": "Tori Murphy Large Tapestry washbag",
+    "category": 1,
+    "brand": "Tori Murphy",
+    "variants": 1,
+    "price": 60,
+    "stock": 2,
+    "image": "ToriMurphyLargeTapestryWashBagportrait.png"
+    }
+ },
+ {
+  "pk": 3,
+  "model": "products.product",
+  "fields": {
+    "sku": "TORI481424",
+    "name": "Tori Murphy Large wash bag",
+    "category": 1,
+    "brand": "Tori Murphy",
+    "variants": 1,
+    "price": 50,
+    "stock": 12,
+    "image": null
+  }
+ },
+ {
+  "pk": 4,
+  "model": "products.product",
+    "fields": {
+    "sku": "TORI936682",
+    "name": "Tori Murphy Shopper Repton",
+    "category": 1,
+    "brand": "Tori Murphy",
+    "variants": 1,
+    "price": 55,
+    "stock": 1,
+    "image": "ToriMurphyShopperReptonsq.png"
+    }
+ },
+ {
+  "pk": 5,
+  "model": "products.product",
+    "fields": {
+    "sku": "TORI200905",
+    "name": "Tori Murphy Small Tapestry washbag",
+    "category": 1,
+    "brand": "Tori Murphy",
+    "variants": 1,
+    "price": 0,
+    "stock": 2,
+    "image": null
+    }
+ },
+ {
+  "pk": 6,
+  "model": "products.product",
+  "fields": {
+    "sku": "TORI973417",
+    "name": "Tori Murphy Small Washbag",
+    "category": 1,
+    "brand": "Tori Murphy",
+    "variants": 1,
+    "price": 38,
+    "stock": 2,
+    "image": null
+    }
+ },
+ {
+  "pk": 7,
+  "model": "products.product",
+  "fields": {
+    "sku": "GIFT804659",
+    "name": "Gift Voucher",
+    "category": 2,
+    "brand": "Barre Fitness",
+    "variants": 1,
+    "price": 25,
+    "stock": 100,
+    "image": "gift-voucherportrait.png"
+  }
+ },
+ {
+  "pk": 8,
+  "model": "products.product",
+  "fields": {
+    "sku": "GIFT604584",
+    "name": "Gift Voucher",
+    "category": 2,
+    "brand": "Barre Fitness",
+    "variants": 1,
+    "price": 50,
+    "stock": 0,
+    "image": null
+  }
+ },
+ {
+  "pk": 9,
+  "model": "products.product",
+  "fields": {
+    "sku": "GIFT560835",
+    "name": "Gift Voucher",
+    "category": 2,
+    "brand": "Barre Fitness",
+    "variants": 1,
+    "price": 100,
+    "stock": 98,
+    "image": "gift-voucher-potrait-2.png"
+  }
+ },
+ {
+  "pk": 10,
+  "model": "products.product",
+  "fields": {
+    "sku": "FRAN472791",
+    "name": "Frank Green small 10oz water bottle",
+    "category": 3,
+    "brand": "Frank Green",
+    "variants": 1,
+    "price": 25.99,
+    "stock": 11,
+    "image": "FrankGreenbottle.jpg"
+  }
+ },
+ {
+  "pk": 11,
+  "model": "products.product",
+  "fields": {
+    "sku": "FRAN480359",
+    "name": "Frank Green small clear 25oz water bottle with small lid",
+    "category": 3,
+    "brand": "Frank Green",
+    "variants": 1,
+    "price": 24,
+    "stock": 7,
+    "image": null
+  }
+ },
+ {
+  "pk": 12,
+  "model": "products.product",
+    "fields": {
+    "sku": "FRAN674744",
+    "name": "Frank Green large 43oz water bottle",
+    "category": 3,
+    "brand": "Frank Green",
+    "variants": 1,
+    "price": 34.99,
+    "stock": 6,
+    "image": null
+    }
+ },
+ {
+  "pk": 13,
+  "model": "products.product",
+  "fields": {
+    "sku": "FRAN993817",
+    "name": "Frank Green 2 water bottle eco gift box",
+    "category": 3,
+    "brand": "Frank Green",
+    "variants": 1,
+    "price": 51.85,
+    "stock": 8,
+    "image": "FrankGreenGiftBoxsq.png"
+  }
+ },
+ {
+  "pk": 14,
+  "model": "products.product",
+  "fields": {
+    "sku": "WATE950101",
+    "name": "Water ActiPH",
+    "category": 3,
+    "brand": "ActiPH",
+    "variants": 1,
+    "price": 1.39,
+    "stock": 9,
+    "image": null
+  }
+ },
+ {
+  "pk": 15,
+  "model": "products.product",
+  "fields": {
+    "sku": "LILY120078",
+    "name": "Lily Bod leggings",
+    "category": 4,
+    "brand": "Lily Bod",
+    "variants": 1,
+    "price": 59,
+    "stock": 11,
+    "image": null
+  }
+ },
+ {
+  "pk": 16,
+  "model": "products.product",
+  "fields": {
+    "sku": "LUPE796548",
+    "name": "Lupe band",
+    "category": 4,
+    "brand": "Luupe",
+    "variants": 1,
+    "price": 4.5,
+    "stock": 95,
+    "image": null
+  }
+ },
+ {
+  "pk": 17,
+  "model": "products.product",
+  "fields": {
+    "sku": "BARR424585",
+    "name": "Barre Fitness sweater",
+    "category": 4,
+    "brand": "Radder",
+    "variants": 2,
+    "price": 48,
+    "stock": 16,
+    "image": "BarreSweater.jpg"
+  }
+ },
+ {
+  "pk": 18,
+  "model": "products.product",
+  "fields": {
+    "sku": "TIEB217314",
+    "name": "Tiebandz",
+    "category": 4,
+    "brand": "Tiebandz",
+    "variants": 2,
+    "price": 7,
+    "stock": 59,
+    "image": null
+  }
+ },
+ {
+  "pk": 19,
+  "model": "products.product",
+  "fields": {
+    "sku": "LJ_P143746",
+    "name": "LJ pink leggings",
+    "category": 4,
+    "brand": "LJ",
+    "variants": 2,
+    "price": 87,
+    "stock": 5,
+    "image": null
+  }
+ },
+ {
+  "pk": 20,
+  "model": "products.product",
+  "fields": {
+    "sku": "LJ_S947369",
+    "name": "LJ Slouchy gym top",
+    "category": 4,
+    "brand": "LJ",
+    "variants": 2,
+    "price": 26,
+    "stock": 4,
+    "image": "SportsTops.jpg"
+  }
+ },
+ {
+  "pk": 21,
+  "model": "products.product",
+  "fields": {
+    "sku": "POIN935071",
+    "name": "Pointe Barre gripper socks",
+    "category": 4,
+    "brand": "Pointe Barre",
+    "variants": 2,
+    "price": 12,
+    "stock": 22,
+    "image": "barre-gripper-socks.png"
+  }
+ }
+]
