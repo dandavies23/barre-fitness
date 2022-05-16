@@ -10,6 +10,11 @@ body {
     font-family: 'Inter';
 }
 
+.home-strap {
+    text-transform: none !important;
+    font-family: 'Domine',Georgia,"Times New Roman",serif !important;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -26,6 +31,17 @@ body {
 .main-logo-link {
     width: fit-content;
 }
+
+/* .btn-circle {
+    width: 100px;
+    height: 100px;
+    padding: 13px 18px;
+    border-radius: 60px;
+    font-size: 15px;
+    text-align: center;
+    background: black;
+    color: white;
+} */
 
 .book-now-button {
     background: black;
