@@ -26,13 +26,13 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="gymkit-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Gymkit
+                Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gymkit-link">
-                <a href="" class="dropdown-item">Rehydration</a>
-                <a href="" class="dropdown-item">Workout Wear</a>
-                <a href="" class="dropdown-item">Extra Kit</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All </a>
+                <a href="{% url 'products' %}?category=clothes" class="dropdown-item">Workout Wear</a>
+                <a href="{% url 'products' %}?category=bag,rehydration" class="dropdown-item">Accessories</a>
+                <a href="{% url 'products' %}?category=voucher" class="dropdown-item">Gift Vouchers</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Shop</a>
             </div>
         </li>
 
