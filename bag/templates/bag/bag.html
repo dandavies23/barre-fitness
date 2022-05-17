@@ -10,7 +10,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="div overlay"></div>
+    <div class="overlay"></div>
+    <div class="container mb-2">
         <div class="row">
             <div class="col">
                 <hr>
@@ -18,10 +19,11 @@
                 <hr>
             </div>
         </div>
+
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                    <div class="table-reponsive rounded"></div>
+                    <div class="table-responsive rounded"></div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -30,6 +32,8 @@
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
+                {% endif %}
             </div>
         </div>
+    </div>
 {% endblock %}
