@@ -36,15 +36,28 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="booking-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Book Now
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="booking-link">
-                <a href="" class="dropdown-item">Classes</a>
-                <a href="" class="dropdown-item">1:1 Session</a>
+                <a href="" class="dropdown-item">Classes Calender</a>
+                <a href="" class="dropdown-item">Book a 1:1 Session</a>
                 <a href="" class="dropdown-item">Your booking</a> <!-- if exists-->
-                <a href="" class="dropdown-item">Your previous bookings</a> <!-- if exists-->
+                <!-- <a href="" class="dropdown-item">Your previous bookings</a> <!-- if exists-->
+            <!-- </div>
+        </li> -->
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="filter-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filter
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="filter-link">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item">By Brand</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Shop</a>
+                <!-- Could also sort by image here too -->
             </div>
         </li>
     </ul>
