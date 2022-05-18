@@ -1,0 +1,1 @@
+web: gunicorn barre-fitness.wsgi:application
