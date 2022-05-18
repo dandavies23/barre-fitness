@@ -1,1 +1,1 @@
-web: gunicorn barre-fitness.wsgi:application
+web: gunicorn barre_fitness.wsgi:application
