@@ -13,18 +13,15 @@ Current site UX: Surface
 The [current site](https://thebarrefitnessstudio.co.uk/) is based in Wordpress it was created by a web company. Who did a good enough job of using design which might appeal to a 20-40 largely female UK audience. Font choices and some of the background patterns add a nice sense of art-deco class. Although they often are ’sliced up’  it doesn’t really chime with the actual feel of visiting the studio. 
 
  
-
-[READMEhomepagebackgroundslicing]
+![Homepage Background](READMEhomepagebackgroundslicing.png)
 
  
 
 I undertook some paid work to add some further images, video and copy-check the site. It’s clear that the site has suffered from 'feature creep'. 
 
  
+![Barre Fitness Navigation bar](READMEBarre Fitness Navigation bar.png)
 
-[image Barre Fitness Navigation bar]
-
- 
 
 This is largely due to the owner wanting to advertise the studio, instructors, classes and deals. 
 
@@ -146,7 +143,7 @@ Languages Used
 
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-<https://github.com/dandavies23/jargon-unchained/blob/main/README.md#frameworks-libraries--programs-used>Frameworks, Libraries & Programs Used
+Frameworks, Libraries & Programs Used
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
  
@@ -170,7 +167,7 @@ Languages Used
 Deployment
 ----------
 
-### <https://github.com/seanyoung247/TWCoulsdon/blob/main/README.md#database-deployment>Database Deployment
+### >Database Deployment
 
 Django will do most of the work of preparing and setting up the database through 'migrations'.
 
@@ -184,7 +181,7 @@ To update the database to the latest models, from the project root:
 
 `python3 manage.py migrate`
 
-### <https://github.com/seanyoung247/TWCoulsdon/blob/main/README.md#local-deployment>Local Deployment
+### Local Deployment
 
 To deploy the project locally first clone the github repository to a local directory:
 
@@ -196,7 +193,7 @@ To deploy the project locally first clone the github repository to a local direc
 
 -   unzip the file to a local directory
 
-#### <https://github.com/seanyoung247/TWCoulsdon/blob/main/README.md#python-environment>Python Environment
+#### Python Environment
 
 After cloning the repository the python environment needs to be set up. Ensure python3 is installed and is version 3.8.6 minimum with the command: `python3 --version`
 
@@ -218,7 +215,7 @@ Once finished working, or if the virtual environment needs to be restarted (for 
 
 `deactivate`
 
-<https://github.com/dandavies23/jargon-unchained/blob/main/README.md#other-thanks-and-acknowledgments>Other thanks and acknowledgments
+Other thanks and acknowledgments
 --------------------------------------------------------------------------------------------------------------------------------------
 
 Thanks to Georgie from Barre Fitness for input and access to Team Up. Thanks to Code Institute support including my mentor Antonio and Tutors Jo, Sean and Christine. I’m thankful for the support, and advise and tolerance from  Juliet Spare, and Pete Doyle plus CI Slack and Stack Overflow communities.
