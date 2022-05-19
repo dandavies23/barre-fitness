@@ -1,108 +1,228 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Introduction
+------------
 
-Welcome dandavies23,
+Barre Fitness is an exercise studio in Bristol which opened after the last lockdown. A large amount of the customers are from the local area but passing traffic was initially slow. A website was created to principally “un-frost” the gym windows so its potential clientele could understand what kind of studio it is and what class costs.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The site was built quickly to build advertise the gym and also mitigate the shortfall in passing traffic post lockdown. The owner believes that the majority of the audience would book classes in person so priority wasn’t given to an integrated membership, booking system and store. This system is dealt with through a third party [TeamUp app](https://goteamup.com/). 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+ 
 
-## Gitpod Reminders
+Current site UX: Surface
+------------------------
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The [current site](https://thebarrefitnessstudio.co.uk/) is based in Wordpress it was created by a web company. Who did a good enough job of using design which might appeal to a 20-40 largely female UK audience. Font choices and some of the background patterns add a nice sense of art-deco class. Although they often are ’sliced up’  it doesn’t really chime with the actual feel of visiting the studio. 
 
-`python3 -m http.server`
+ 
 
-A blue button should appear to click: _Make Public_,
+[READMEhomepagebackgroundslicing]
 
-Another blue button should appear to click: _Open Browser_.
+ 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+I undertook some paid work to add some further images, video and copy-check the site. It’s clear that the site has suffered from 'feature creep'. 
 
-A blue button should appear to click: _Make Public_,
+ 
 
-Another blue button should appear to click: _Open Browser_.
+[image Barre Fitness Navigation bar]
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+ 
 
-To log into the Heroku toolbelt CLI:
+This is largely due to the owner wanting to advertise the studio, instructors, classes and deals. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The second most fundamental issue with the site is that due to low technical knowledge from the owner. Which is why TeamUp has been integrated as an iframe. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+A new user journey is currently confused. You can find out lots of background information (see navbar) including class pricing. 
 
-------
+ 
 
-## Release History
+[READMEclasspricing]
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+But then you have to find the same class offer in the TeamUp app displayed within an iFrame. And the user then has to sign up with TeamUp.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+ 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+[READMETeamUpIntroOffers]
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+ 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The TeamUp is a market leader and despite an old looking UI does function quite well. Once the user is signed up they are advised to download the app to manage their schedule. Which functions well. The owner admits that there is significant drop off between visiting the site and buying.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+ 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Additionally, the shop which has become a more important daily form of income for the business is very poor in the Team Up UI. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+ 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+UX Priorities
+-------------
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+1.  To produce a cleaner shop intergration which can be linked to and from the current site in the navigation
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+2.  New site will be membership focussed website which makes buying from the shop, buying class bundles or booking an appointment a pleasure. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+ 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+User Stories
+------------
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The surface developer goals for this current MVP are. 
 
-------
++--------------------------+------------------------------------------+
+| **As a…**                | **I want to be able to**                 |
++--------------------------+------------------------------------------+
+| Site visitor             | understand what Barre Fitness is, and    |
+|                          | who and what this site is for            |
++--------------------------+------------------------------------------+
+| New customer / returning | Have an enticement to buy membership or  |
+|                          | from the shop                            |
++--------------------------+------------------------------------------+
+| New customer             | see further information about            |
+|                          | introductory offers and memberships      |
++--------------------------+------------------------------------------+
+| New customer / returning | login to account to see membership       |
+|                          | status and what is booked                |
++--------------------------+------------------------------------------+
+| New / returning customer | see what classes there are and people    |
+|                          | who run them                             |
++--------------------------+------------------------------------------+
+| Returning customer       | see what classes are available and how   |
+|                          | many spaces are available                |
++--------------------------+------------------------------------------+
+| New / returning customer | see a calendar view of available classes |
++--------------------------+------------------------------------------+
 
-## FAQ about the uptime script
+ 
 
-**Why have you added this script?**
+ 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+Scope
+-----
 
-**How will this affect me?**
+### Sprint 1: Scope (1 week)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+1.  Research look and layout the site with the 5 planes of UX (Research, ReadME, Wireframes)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+2.  Planning out work process deadlines, work structure and testing implementation
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+ 
 
-**So….?**
+### Sprint 2: Structure and Skeleton(2 weeks)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+1.  Code out site structure, repo and basic layout
 
-**Can I opt out?**
+2.  Export databases from Team Up, restructure in JSON Format
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+3.  Structure databases in Django’s SQL DB
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+4.  Map out DB interrelation for members - booked classes etc
 
-**Anything more?**
+5.  Create basic shopping app from end-to-end based on learning in previous Walkthrough
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+6.  **Deploy to Heroku**
 
----
+7.  Integrate Stripe, S3 for images
 
-Happy coding!
+8.  Upload membership database and link member info with history
+
+9.  Integrate members calendar
+
+ 
+
+*Project stalled at point 6 as ​Heroku automatic deployment stalled this process*
+
+ 
+
+Languages Used
+--------------
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+-   [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+-   [jQuery](https://en.wikipedia.org/wiki/JQuery)
+
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+<https://github.com/dandavies23/jargon-unchained/blob/main/README.md#frameworks-libraries--programs-used>Frameworks, Libraries & Programs Used
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+
+-   [Django](https://www.djangoproject.com/) - main framework for building site including specific intergrations includedd 
+
+-   Bootstrap 4 for styling and layout
+
+-   [Heroku](https://dashboard.heroku.com/) The cloud platform for deploying the app.
+
+-   [Git](https://git-scm.com/) Used Git for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+-   [GitHub](https://github.com/) GitHub stored the projects code after being pushed to Heroku via Flask
+
+-   [Balsamiq](https://balsamiq.com/) To create initial wireframes for the project design - full wireframes can be seen here.
+
+-   [Photoshop](https://www.adobe.com/uk/products/photoshop/) Used to crop, resize and optimise main illustration - also experimented with Google Webp image
+
+ 
+
+Deployment
+----------
+
+### <https://github.com/seanyoung247/TWCoulsdon/blob/main/README.md#database-deployment>Database Deployment
+
+Django will do most of the work of preparing and setting up the database through 'migrations'.
+
+To update the database to the latest models, from the project root:
+
+1.  First generate the python migration scripts:
+
+`python3 manage.py makemigrations`
+
+1.  Then run the scripts and update the database:
+
+`python3 manage.py migrate`
+
+### <https://github.com/seanyoung247/TWCoulsdon/blob/main/README.md#local-deployment>Local Deployment
+
+To deploy the project locally first clone the github repository to a local directory:
+
+-   Navigate to the project's github repository (<https://github.com/dandavies23/barre-fitness>)
+
+-   Select the "Code" button above the file listing
+
+    -   Select download Zip
+
+-   unzip the file to a local directory
+
+#### <https://github.com/seanyoung247/TWCoulsdon/blob/main/README.md#python-environment>Python Environment
+
+After cloning the repository the python environment needs to be set up. Ensure python3 is installed and is version 3.8.6 minimum with the command: `python3 --version`
+
+You will then need to create a virtual environment: From the projects local root directory run the following command:
+
+`python3 -m venv .`
+
+To activate the virtual environment use the command:
+
+`source bin/activate`
+
+Once the virtual environment is activated the project's python prerequists can be installed with:
+
+`pip3 install -r requirements.txt`
+
+Database migrations should now be run as outlined above.
+
+Once finished working, or if the virtual environment needs to be restarted (for instance if environment varibles have change and need to be reloaded) deactivate by typing:
+
+`deactivate`
+
+<https://github.com/dandavies23/jargon-unchained/blob/main/README.md#other-thanks-and-acknowledgments>Other thanks and acknowledgments
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Thanks to Georgie from Barre Fitness for input and access to Team Up. Thanks to Code Institute support including my mentor Antonio and Tutors Jo, Sean and Christine. I’m thankful for the support, and advise and tolerance from  Juliet Spare, and Pete Doyle plus CI Slack and Stack Overflow communities.
+
+ 
+
+ 
