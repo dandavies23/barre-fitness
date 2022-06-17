@@ -265,7 +265,6 @@ _Whilst the problem persistes must do this every time you push to ensure that bo
 
 _In order to push to Heroku you will need to login through the CLI for every Gitpod session. ``` heroku login -i ``` using your email as login and Heroku API as password._
 
-
 Other thanks and acknowledgments
 --------------------------------------------------------------------------------------------------------------------------------------
 
