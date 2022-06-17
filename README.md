@@ -215,6 +215,57 @@ Once finished working, or if the virtual environment needs to be restarted (for 
 
 `deactivate`
 
+## Heroku Deployment
+Before following the steps listed below, a requirements.txt file and a Procfile were created and pushed to GitHub from Gitpod using the following commands:
+
+    pip3 freeze --local > requirements.txt
+    echo web: python app.py > Procfile
+
+Then to integrate APScheduler into the application to automate the awards() & new competition processess I added a second dyno to my Procfile --> clock: python jobs.py Referring to the jobs.py file where the scheduled jobs are listed.
+
+Use the Heroku CLI to scale up the clock process using the command: heroku ps:scale clock=1
+
+The application was deployed via Heroku using this process:
+Navigated to Heroku
+Signed into my Heroku account.
+Selected "New" on the dashboard and then "Create new application" option as below:
+
+
+Selected a name for my application, selected "Europe" as the region and clicked "Create app".
+
+5. With the "Deploy" tab selected, "GitHub - Connect to GitHub" was chosen as the deployment method. 
+
+
+6. Make GitHub profile is, click "connect" next to the GitHub repository for this project.
+
+
+7. Navigate to the "Settings" tab and clicked on "Reveal Convig Vars".
+Added configuration variables to Heroku.
+Navigated back to the "Deploy" tab and selected "Enable Automatic Deploys" with the master branch selected from the dropdown box.
+
+10. Then clicked on "Deploy Branch" also with master selected.
+
+11. Site is deployed and any changes are automatically deployed each time they are updated and pushed to GitHub during development.
+
+_NOTE: Due to a security issue, Heroku disabled automated deployments from GitHub during the development of this app. On [30th May 2022](https://status.heroku.com/incidents/2413) this was resolved but on 3rd June 2022 it was still disabled for this app. The following additional steps are needed to push to both repositories. There are additional steps if you have MFA/2FA authentication activated you need to retrieve the API key from the dashboard and use this when prompted._ 
+
+1. Open terminal in Gitpod.
+2. Get your app name from Heroku:
+Enter the following command in the terminal: heroku apps
+4.   Set the Heroku remote. (Replace <app_name> with your actual app name and remove the <> characters)
+Enter the following command in the terminal: heroku git:remote -a <app_name>
+5.   Add and commit any changes to your code, if applicable.
+Enter the following command in the terminal: 
+```git add . && git commit -m "Deploy to Heroku via CLI"``` 
+ 6.   Push to both GitHub and Heroku
+Enter the following command in the terminal: ```git push origin main```
+Enter the following command in the terminal: ```git push heroku main```
+
+_Whilst the problem persistes must do this every time you push to ensure that both repo's are the same_
+
+_In order to push to Heroku you will need to login through the CLI for every Gitpod session. ``` heroku login -i ``` using your email as login and Heroku API as password._
+
+
 Other thanks and acknowledgments
 --------------------------------------------------------------------------------------------------------------------------------------
 
