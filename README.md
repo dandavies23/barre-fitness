@@ -13,14 +13,14 @@ Current site UX: Surface
 The [current site](https://thebarrefitnessstudio.co.uk/) is based in Wordpress it was created by a web company. Who did a good enough job of using design which might appeal to a 20-40 largely female UK audience. Font choices and some of the background patterns add a nice sense of art-deco class. Although they often are ’sliced up’  it doesn’t really chime with the actual feel of visiting the studio. 
 
  
-![Homepage Background](READMEhomepagebackgroundslicing.png)
+![Homepage Background](media/READMEhomepagebackgroundslicing.png)
 
  
 
 I undertook some paid work to add some further images, video and copy-check the site. It’s clear that the site has suffered from 'feature creep'. 
 
  
-![Barre Fitness Navigation bar](READMEBarre Fitness Navigation bar.png)
+![Barre Fitness Navigation bar](media/READMEBarreFitnessNavigationbar.png)
 
 
 This is largely due to the owner wanting to advertise the studio, instructors, classes and deals. 
@@ -30,33 +30,30 @@ The second most fundamental issue with the site is that due to low technical kno
 A new user journey is currently confused. You can find out lots of background information (see navbar) including class pricing. 
 
  
-
-[READMEclasspricing]
-
- 
+![Class pricing](media/READMEclasspricing.png)
 
 But then you have to find the same class offer in the TeamUp app displayed within an iFrame. And the user then has to sign up with TeamUp.
 
- 
+![Team offers](media/READMETeamUpIntroOffers.png)
 
-[READMETeamUpIntroOffers]
+The TeamUp is a market leader and despite an old looking UI does function quite well. Once the user is signed up they are advised to download the app to manage their schedule. Which functions well. The owner admits that there is significant drop off between visiting the site and paying for anything.
 
- 
+In addition to buying training/session packs. The shop which has become a more important daily form of income for the business is very poor in the Team Up UI. 
 
-The TeamUp is a market leader and despite an old looking UI does function quite well. Once the user is signed up they are advised to download the app to manage their schedule. Which functions well. The owner admits that there is significant drop off between visiting the site and buying.
+The main priority of this MVP is to get the shop / point of sale working and integrated into a functional shop window and also looking good. 
 
- 
+The booking and membership functionality and calendar will be dealt with in a later version of development. 
 
-Additionally, the shop which has become a more important daily form of income for the business is very poor in the Team Up UI. 
-
- 
-
-UX Priorities
+UX and DB Priorities
 -------------
 
 1.  To produce a cleaner shop intergration which can be linked to and from the current site in the navigation
 
-2.  New site will be membership focussed website which makes buying from the shop, buying class bundles or booking an appointment a pleasure. 
+2.  Make buying kit from the shop or class bundles a pleasure. 
+
+3. Integrate site with Stripe so that member can pay
+
+3. Create a login area so members can order and go back to basket
 
  
 
@@ -68,7 +65,7 @@ The surface developer goals for this current MVP are.
 +--------------------------+------------------------------------------+
 | **As a…**                | **I want to be able to**                 |
 +--------------------------+------------------------------------------+
-| Site visitor             | understand what Barre Fitness is, and    |
+| Site visitor             | understand what the Barre Fitness shop is, and    |
 |                          | who and what this site is for            |
 +--------------------------+------------------------------------------+
 | New customer / returning | Have an enticement to buy membership or  |
@@ -78,7 +75,10 @@ The surface developer goals for this current MVP are.
 |                          | introductory offers and memberships      |
 +--------------------------+------------------------------------------+
 | New customer / returning | login to account to see membership       |
-|                          | status and what is booked                |
+|                          | status and what is booked / bought and shipped      |
++--------------------------+------------------------------------------+
+
+For later sprints
 +--------------------------+------------------------------------------+
 | New / returning customer | see what classes there are and people    |
 |                          | who run them                             |
@@ -88,8 +88,6 @@ The surface developer goals for this current MVP are.
 +--------------------------+------------------------------------------+
 | New / returning customer | see a calendar view of available classes |
 +--------------------------+------------------------------------------+
-
- 
 
  
 
@@ -108,25 +106,50 @@ Scope
 
 1.  Code out site structure, repo and basic layout
 
-2.  Export databases from Team Up, restructure in JSON Format
+2.  Export shop databases from TeamUp, restructure in JSON Format
 
 3.  Structure databases in Django’s SQL DB
 
-4.  Map out DB interrelation for members - booked classes etc
+### Sprint 3: Skeleton, structure and surface
 
-5.  Create basic shopping app from end-to-end based on learning in previous Walkthrough
+1.  Create basic shopping app from end-to-end based on learning in previous Walkthroughs.
 
-6.  **Deploy to Heroku**
+2. Create fixtures from current shop within team-up
 
-7.  Integrate Stripe, S3 for images
+3. Add pictures and styling which chime with current branding. (see design)
 
-8.  Upload membership database and link member info with history
+4. Deploy to Heroku, add images to AWS - issues with [deployment to Heroku](#automated-deployment-suspension) and timescale to get AWS working. Content freeze for CI Marking.
 
-9.  Integrate members calendar
+### Sprint 4 structure
 
- 
+1. Mop up of previous issues and process.
 
-*Project stalled at point 6 as ​Heroku automatic deployment stalled this process*
+2. Create new project Kanban. 
+
+3. Stage media connect Django to AWS S3
+
+4. Stripe integration
+
+5. Working basket and members area
+
+5. Map out DB interrelation for members - booked classes etc
+
+### Sprint 5 Surface
+
+1. Work on customer to and from public WP and this proposed version
+
+2. Add other elements so site could potentially replace more of the site.
+
+3. Reintroduce Team-Up purely as a booking service within site.
+
+Later sprints
+
+1.  Upload membership database and link member info with history (anonmised for from TeamUp)
+
+2. Integrate members calendar and booking system into Database.
+
+
+
 
  
 
@@ -167,7 +190,7 @@ Frameworks, Libraries & Programs Used
 Deployment
 ----------
 
-### >Database Deployment
+### Database Deployment
 
 Django will do most of the work of preparing and setting up the database through 'migrations'.
 
@@ -246,6 +269,8 @@ Navigated back to the "Deploy" tab and selected "Enable Automatic Deploys" with 
 10. Then clicked on "Deploy Branch" also with master selected.
 
 11. Site is deployed and any changes are automatically deployed each time they are updated and pushed to GitHub during development.
+
+## Automated Deployment suspension
 
 _NOTE: Due to a security issue, Heroku disabled automated deployments from GitHub during the development of this app. On [30th May 2022](https://status.heroku.com/incidents/2413) this was resolved but on 3rd June 2022 it was still disabled for this app. The following additional steps are needed to push to both repositories. There are additional steps if you have MFA/2FA authentication activated you need to retrieve the API key from the dashboard and use this when prompted._ 
 
