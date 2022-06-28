@@ -228,7 +228,7 @@ input[name='q']::placeholder {
     padding: 0.15rem !important;
 }
 
-/* padding: 0.5rem 0.75rem; */
+/* padding: 0.5rem 0.75rem; still showing... */
 
 .nav-link i.fa-lg {
     font-size: 1rem;
