@@ -225,8 +225,10 @@ input[name='q']::placeholder {
 }
 
 .nav-link {
-    padding: 0.15rem;
+    padding: 0.15rem !important;
 }
+
+/* padding: 0.5rem 0.75rem; */
 
 .nav-link i.fa-lg {
     font-size: 1rem;
@@ -255,4 +257,5 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+}
 }
